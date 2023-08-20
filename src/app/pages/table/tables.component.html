@@ -1,0 +1,70 @@
+<mat-card class="card">
+  <h1>Campaigns</h1>
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="campaignName">
+      <th mat-header-cell *matHeaderCellDef>Campaign Name</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.campaignName }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="country">
+      <th mat-header-cell *matHeaderCellDef>Country</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.country }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="conversions">
+      <th mat-header-cell *matHeaderCellDef>Conversions</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.conversions | number }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="impressions">
+      <th mat-header-cell *matHeaderCellDef>Impressions</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.impressions | number }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="rowRate">
+      <th mat-header-cell *matHeaderCellDef>Conv Rate</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.rowRate | percent : "1.2" }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="totalSpent">
+      <th mat-header-cell *matHeaderCellDef>Total Spent</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.totalSpent | currency }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="consConv">
+      <th mat-header-cell *matHeaderCellDef>Cost/Conv</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.consConv | currency }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="startDate">
+      <th mat-header-cell *matHeaderCellDef>Start Date(UTC)</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.startDate }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endDate">
+      <th mat-header-cell *matHeaderCellDef>End Date(UTC)</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.endDate }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsDislplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsDislplay"></tr>
+  </table>
+</mat-card>

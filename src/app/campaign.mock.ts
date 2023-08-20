@@ -1,0 +1,48 @@
+import { Campaign } from './model/data.model';
+
+export const CAMPAIGN_DATA: Campaign[] = [
+  {
+    campaignName: 'Campaign 1',
+    country: 'ID',
+    conversions: 210563,
+    impressions: 2022842,
+    rowRate: 0.1007,
+    totalSpent: 23.423,
+    consConv: 0.1,
+    startDate: '11/11/15',
+    endDate: '01/61/16',
+  },
+  {
+    campaignName: 'Campaign 2',
+    country: 'TH',
+    conversions: 40449,
+    impressions: 396295,
+    rowRate: 0.105,
+    totalSpent: 44900,
+    consConv: 0.1,
+    startDate: '10/16/15',
+    endDate: '12/30/15',
+  },
+  {
+    campaignName: 'Campaign 3',
+    country: 'PH',
+    conversions: 101544,
+    impressions: 388523,
+    rowRate: 0.0297,
+    totalSpent: 11544,
+    consConv: 0.1,
+    startDate: '10/16/15',
+    endDate: '12/30/15',
+  },
+  {
+    campaignName: 'Campaign 4',
+    country: 'BR',
+    conversions: 650022,
+    impressions: 5360372,
+    rowRate: 0.0121,
+    totalSpent: 65022,
+    consConv: 0.1,
+    startDate: '10/16/15',
+    endDate: '12/30/15',
+  },
+];
